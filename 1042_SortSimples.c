@@ -1,43 +1,34 @@
 #include <stdio.h>
 
 int main(){
-	int vetor1[3], vetor2[3], aux;
+	int A, B, C, X, Y, Z, aux;
 
-	scanf("%d %d %d", &vetor1[0], &vetor1[1], &vetor1[2]);
+	scanf("%d %d %d", &A, &B, &C);
 
-	for (int i = 0; i <= 2; i++){
-		vetor2[i] = vetor1[i];
+	aux = 0;
+	X = A;
+	Y = B;
+	Z = C;
+
+	if (A < B){
+		aux = A;
+		A = B;
+		B = aux;
 	}
 
-	if(vetor1[0] > vetor1[1]){
-		aux = vetor1[0];
-		vetor1[0] = vetor1[1];
-		vetor1[1] = aux;
+	if (B < C){
+		aux = B;
+		B = C;
+		C = aux;
 	}
 
-	if (vetor1[1] > vetor1[2]){
-		aux = vetor1[1];
-		vetor1[1] = vetor1[2];
-		vetor1[2] = aux;
+	if (A < B){
+		aux = A;
+		A = B;
+		B = aux;
 	}
 
-	if (vetor1[0] > vetor1[1]){
-		aux = vetor1[0];
-		vetor1[0] = vetor1[1];
-		vetor1[1] = aux;
-	}
-
-
-	for (int i = 0; i <= 2; i++){
-		printf("%d\n", vetor1[i]);
-	}
-
-	printf("\n");
-
-	for (int i = 0; i <= 2; i++){
-		printf("%d\n", vetor2[i]);
-	}
-
+	printf("%d\n%d\n%d\n\n%d\n%d\n%d\n", C, B, A, X, Y, Z);
 
 	return 0;
 }

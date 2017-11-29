@@ -8,6 +8,12 @@ int main(){
 	if(x == 0.00 && y == 0.00){
 		printf("Origem\n");
 
+	}else if (x == 0.00){
+		printf("Eixo Y\n");
+
+	}else if (y == 0.00){
+		printf("Eixo X\n");
+
 	}else if(x > 0.00 && y > 0.00){
 		printf("Q1\n");
 

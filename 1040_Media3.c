@@ -12,23 +12,26 @@ int main(){
 	if (Media >= 7.00){
 		printf("Aluno aprovado.\n");
 
-	}else if (Media < 5.00){
-		printf("Aluno reprovado\n");
+	}else if (Media >= 5.00){
 
-	}else if(Media >= 5.00 || Media <= 6.9){
 		printf("Aluno em exame.\n");
 		scanf("%lf", &Nex);
 		printf("Nota do exame: %.1lf\n", Nex);
-
-		if (Media >= 5.00){
+	
+		Media = (Nex + Media)/2;	
+		
+		if (Media > 5.00){
 			printf("Aluno aprovado.\n");
 
 		}else{
-			printf("Aluno reptovado.\n");
-		}
+			printf("Aluno reprovado.\n");
 
-		Media = (Nex + Media)/2;
+		}
+		
 		printf("Media final: %.1lf\n", Media);
+
+	}else{
+		printf("Aluno reprovado.\n");
 	}
 
 	return 0;
